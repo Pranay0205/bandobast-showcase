@@ -1,12 +1,20 @@
 # Bandobast
 
-Bandobast is a SaaS for event vendors and photographers in India. It manages bookings, finances, services, team, and photo delivery in one place, replacing the Excel sheets, WhatsApp threads, and Google Drive links vendors currently juggle.
+Bandobast is a SaaS for event vendors and photographers in India. It manages bookings, finances, services, team, and photo delivery in one place. It replaces the Excel sheets, WhatsApp threads, and Google Drive links vendors currently juggle.
 
-Built by [Pranay Ghuge](https://github.com/Pranay0205). The production repository is private. This is a public showcase of the architecture and the product thinking behind it.
+Live at [bandobast.in](https://bandobast.in). Built by [Pranay Ghuge](https://github.com/Pranay0205). The production repository is private. This repo is a public showcase of the product and the architecture behind it.
+
+## Traction
+
+- Active paying customers: [YOUR INPUT: number of active paying customers]
+- Bookings managed so far: [YOUR INPUT: total bookings managed to date]
+- Client photos delivered: [YOUR INPUT: total photos delivered to clients]
+- Monthly recurring revenue: [YOUR INPUT: monthly recurring revenue]
+- Launched: [YOUR INPUT: month and year the first customer went live]
 
 ## The problem
 
-Small event vendors, photographers, venues, planners, run their business on Excel and WhatsApp. Bookings get double-booked, post-event photo deliveries slip past deadlines, and client photos go out over ad-hoc Drive links with no privacy control.
+Small event vendors, photographers, venues, and planners run their business on Excel and WhatsApp. Bookings get double-booked. Post-event photo deliveries slip past deadlines. Client photos go out over ad-hoc Drive links with no privacy control.
 
 ## What it does
 
@@ -19,16 +27,7 @@ Small event vendors, photographers, venues, planners, run their business on Exce
 
 ## Architecture
 
-- **Go/Echo monolith**, Handler to Service to Repository layers, with eight independently testable feature modules.
-- **BFF-style**: Next.js SSR sits in front of the internal Go API. JWTs live in HTTP-only cookies, and authenticated JSON payloads never reach the browser.
-- **Tenant isolation** at both the application and database layers. Repository queries are scoped with `tenant_id` and backed by PostgreSQL 16 Row-Level Security.
-- **Request pipeline** is standardized around rate limiting, JWT validation, RBAC, tenant context, and subscription checks before any handler logic runs.
-- **Type-safe database access** with sqlc and goose migrations embedded via `embed.FS`, across roughly 25 tables.
-- **Lean infrastructure**: five Docker Compose services on a single Hetzner VPS, with Cloudflare Tunnel exposing only the frontend.
-
-## Discovery
-
-Interviewed small Indian wedding vendors before building. Focused the MVP on workflows they already ran through Excel and WhatsApp. Planned a 26-week path to soft launch, prioritizing auth, service setup, bookings, public widgets, and task boards before add-on monetization features.
+The full system overview lives in [ARCHITECTURE.md](ARCHITECTURE.md). Short version: a Go and Echo monolith with Handler to Service to Repository layers, a Next.js SSR frontend sitting in front of the internal API, tenant isolation at the application and database layers, and five Docker Compose services on a single VPS.
 
 ## Tech stack
 
@@ -36,7 +35,18 @@ Go, Echo, Next.js, React, TypeScript, PostgreSQL 16, sqlc, goose, libvips, Cloud
 
 ## Screenshots
 
-Coming soon.
+[YOUR INPUT: screenshot of the booking calendar showing employee availability, saved as screenshots/booking-calendar.png]
+![Booking calendar](screenshots/booking-calendar.png)
+
+[YOUR INPUT: screenshot of the kanban delivery task board, saved as screenshots/task-board.png]
+![Task board](screenshots/task-board.png)
+
+[YOUR INPUT: screenshot of the client photo delivery gallery, saved as screenshots/photo-delivery.png]
+![Photo delivery](screenshots/photo-delivery.png)
+
+## Discovery
+
+Interviewed small Indian wedding vendors before building. Focused the MVP on workflows they already ran through Excel and WhatsApp. Planned a 26-week path to soft launch, prioritizing auth, service setup, bookings, public widgets, and task boards before add-on monetization features.
 
 ## Contact
 
