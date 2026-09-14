@@ -4,14 +4,6 @@ Bandobast is a SaaS for event vendors and photographers in India. It manages boo
 
 Live at [bandobast.in](https://bandobast.in). Built by [Pranay Ghuge](https://github.com/Pranay0205). The production repository is private. This repo is a public showcase of the product and the architecture behind it.
 
-## Traction
-
-- Active paying customers: [YOUR INPUT: number of active paying customers]
-- Bookings managed so far: [YOUR INPUT: total bookings managed to date]
-- Client photos delivered: [YOUR INPUT: total photos delivered to clients]
-- Monthly recurring revenue: [YOUR INPUT: monthly recurring revenue]
-- Launched: [YOUR INPUT: month and year the first customer went live]
-
 ## The problem
 
 Small event vendors, photographers, venues, and planners run their business on Excel and WhatsApp. Bookings get double-booked. Post-event photo deliveries slip past deadlines. Client photos go out over ad-hoc Drive links with no privacy control.
