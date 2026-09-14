@@ -14,7 +14,7 @@ Small event vendors, photographers, venues, planners, run their business on Exce
 - **Task boards.** Booking time auto-creates kanban delivery tasks, and a background worker marks overdue work, so missed post-event deadlines surface on their own.
 - **Services.** Per-category JSON schemas drive service fields, so photography and venues share one code path instead of separate ones.
 - **Team.** Five role types with employee-level role-based access control.
-- **Photos.** Privacy-focused pipeline. libvips generates three thumbnail sizes plus compressed previews, uploads them to Cloudflare R2, verifies storage, then deletes the original upload.
+- **Photos.** Privacy-focused pipeline managing around 10K photos per customer. libvips generates three thumbnail sizes plus compressed previews, uploads them to Cloudflare R2, verifies storage, then deletes the original upload.
 - **Finance.** Subscription checks run in the request pipeline. Vendor interviews validated a Rs. 499/month price point.
 
 ## Architecture
