@@ -33,17 +33,6 @@ The full system overview lives in [ARCHITECTURE.md](ARCHITECTURE.md). Short vers
 
 Go, Echo, Next.js, React, TypeScript, PostgreSQL 16, sqlc, goose, libvips, Cloudflare R2, Docker Compose, Hetzner, Cloudflare Tunnel.
 
-## Screenshots
-
-[YOUR INPUT: screenshot of the booking calendar showing employee availability, saved as screenshots/booking-calendar.png]
-![Booking calendar](screenshots/booking-calendar.png)
-
-[YOUR INPUT: screenshot of the kanban delivery task board, saved as screenshots/task-board.png]
-![Task board](screenshots/task-board.png)
-
-[YOUR INPUT: screenshot of the client photo delivery gallery, saved as screenshots/photo-delivery.png]
-![Photo delivery](screenshots/photo-delivery.png)
-
 ## Discovery
 
 Interviewed small Indian wedding vendors before building. Focused the MVP on workflows they already ran through Excel and WhatsApp. Planned a 26-week path to soft launch, prioritizing auth, service setup, bookings, public widgets, and task boards before add-on monetization features.
